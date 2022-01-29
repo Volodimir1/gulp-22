@@ -1,5 +1,7 @@
 <p align="center">
-   <img height="155" width="71" style="background-color: #f00; border-radius: 3px" src="https://gulpjs.com/img/gulp-white-logo.svg">
+   <a href="https://gulpjs.com">
+      <img height="155" width="71" style="background-color: #f00; border-radius: 3px" src="https://gulpjs.com/img/gulp.svg">
+   </a>
    <h1 align="center">Gulp 2022</h1>
 </p>
 
