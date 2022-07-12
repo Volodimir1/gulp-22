@@ -20,6 +20,7 @@ import { server } from "./gulp/tasks/server.js";
 import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
+import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 
 // File change watcher
 function watcher() {
@@ -30,8 +31,11 @@ function watcher() {
    gulp.watch(path.watch.images, images);
 }
 
+// Consistent fonts handling
+const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
+
 // Main tasks
-const mainTasks = gulp.parallel(copy, html, scss, js, images);
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
 
 // Building task execution scripts
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
