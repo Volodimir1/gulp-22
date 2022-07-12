@@ -1,21 +1,6 @@
 body {
-   background-color: #000;
+   background: url("@img/smile_620x280.jpeg") 0 0 no-repeat;
    span {
       color: red;
-   }
-//   background: url("@img/cover.jpg") 0 0 no-repeat;
-}
-
-@media (max-width: 768px) {
-   span {
-      font-size: 20px;
-   }
-}
-
-
-
-@media (max-width: 768px) {
-   body {
-      background-color: green;
    }
 }
