@@ -1,5 +1,9 @@
+@import "fonts";
+
 body {
-   background: url("@img/smile_620x280.jpeg") 0 0 no-repeat;
+   background-color: #555;
+   font-family: CormorantUpright;
+   font-size: 30px;
    span {
       color: red;
    }
