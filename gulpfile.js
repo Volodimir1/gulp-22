@@ -7,6 +7,8 @@ import { plugins } from "./gulp/config/plugins.js";
 
 // Passing values to global variable
 global.app = {
+  isBuild: process.argv.includes('--build'),
+  isDev: !process.argv.includes('--build'),
   path: path,
   gulp: gulp,
   plugins: plugins
@@ -42,6 +44,11 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images)
 
 // Building task execution scripts
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const build = gulp.series(reset, mainTasks);
+
+// Export scripts
+export { dev }
+export { build }
 
 // Executing the default script
 gulp.task('default', dev);
