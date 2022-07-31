@@ -10,6 +10,8 @@
 [gulpjs.com](https://gulpjs.com)
 
 ## Installation
+```bash
 npx degit Volodimir1/gulp-22 <my-new-project>
 cd <my-new-project>
 npm install
+```
