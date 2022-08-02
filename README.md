@@ -15,3 +15,6 @@ npx degit Volodimir1/gulp-22 <my-new-project>
 cd <my-new-project>
 npm install
 ```
+
+# Run it
+npm run dev
