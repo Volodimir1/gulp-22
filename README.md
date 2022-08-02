@@ -16,5 +16,5 @@ cd <my-new-project>
 npm install
 ```
 
-# Run it
+### Run it
 npm run dev
